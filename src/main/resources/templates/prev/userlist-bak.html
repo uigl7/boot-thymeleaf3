@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
- <title>Registration Form</title>
+    <title>Registration Form</title>
 	<th:block th:include="fragments/header"></th:block>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
@@ -25,7 +25,7 @@
 	   <tr th:each="user : ${users}">
 			<th scope="row">
 			<a th:href="@{/users/{id}(id=${user.id})}">
-			<span th:text="${user.id}"></a></span></td>
+			<span th:text="${user.id}"></a></span></th>
 			<td><span th:text="${user.name}"></span></td>
 			<td><span th:text="${user.company}"></span></td>
 		</tr>
@@ -36,4 +36,4 @@
 <th:block th:include="fragments/footer"></th:block>
 
 </body>
-</html> 
+</html>
